@@ -38,15 +38,34 @@
 }
 
 /* Base */
+
+/* коли вказуємо "*" звстосовується до всього*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Poppins, sans-serif;
   color: var(--color-primary-dark);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
+  background-color: brown;
 }
 
+h1,
+h1,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
 ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -54,8 +73,31 @@ address {
   font-style: normal;
 }
 
+/* сховати контент візуально, браузер бачить */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+/* максимальна ширина сайту */
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 /* Button */
 .button {
+  padding: 16px 32px;
   font-weight: 600;
   color: var(--color-primary-light);
   border: 2px solid var(--color-brand-light);
@@ -77,11 +119,37 @@ address {
 
 .link:hover {
   color: var(--color-brand-light);
-  font-weight: 600;
+}
+
+/* Header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-manu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero section */
+.hero-section {
+  padding: 272px 0;
+}
+
 .hero-title {
+  margin-bottom: 0;
   text-align: center;
   color: var(--color-primary-light);
   font-size: 128px;
@@ -93,12 +161,20 @@ address {
 }
 
 /* Adventages section */
-.advantages-list {
-  color: var(--color-primary-light);
+
+.advantages-section {
   background-color: var(--color-brand-light);
+  padding: 16px 0;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .advantages-item {
+  color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
 }
@@ -114,23 +190,79 @@ address {
 }
 
 /* Traditions section */
-.tradition-text .brand-uppercase {
-  text-transform: uppercase;
-  color: var(--color-brand-light);
-  font-weight: 600;
+
+.tradition-section {
+  padding-top: 96px;
 }
+
+.tradition-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.tradition-content {
+  max-width: 710px;
+}
+
+.tradition-title {
+  margin-bottom: 42px;
+}
+
 .tradition-text .brand {
   color: var(--color-brand-light);
+  font-size: 600;
+}
+
+.tradition-text .uppercase {
+  text-transform: uppercase;
+}
+
+.tradition-text.limited {
+  max-width: 340px;
 }
 
 /* cookers section */
 
+.cooker-title {
+  margin-bottom: 80px;
+}
+
 .cookers-title {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
 }
 
 /* formats section */
+
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formats-item {
+  /* flex-grow: 1;
+  flex-shrink: 0; */
+  flex-basis: calc((100% - 40px) / 3);
+  /* min-width: 290px; */
+  /* flex: 1 0 calc(100% / 3 - 20px);
+  box-sizing: border-box; */
+}
+
+.format-card {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  /* box-sizing: border-box; */
+  /* видалити */
+}
+
+.format-title {
+  margin-bottom: 80px;
+}
 
 .formats-title {
   font-size: 24px;
@@ -140,6 +272,12 @@ address {
 .formats-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* contact section */
+
+.contact-title {
+  margin-bottom: 16px;
 }
 
 /* footer */
