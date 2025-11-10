@@ -42,7 +42,9 @@
 /* Base */
 
 /* коли вказуємо "*" звстосовується до всього*/
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -65,6 +67,11 @@ h6,
 p {
   margin-top: 0;
 }
+
+a {
+  display: inline-block;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -187,7 +194,7 @@ address {
 
 .section-title {
   font-size: 64px;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1.3;
 }
 
@@ -217,6 +224,7 @@ address {
 
 .tradition-title {
   margin-bottom: 42px;
+  margin-top: auto;
 }
 
 .tradition-text .brand {
@@ -240,12 +248,7 @@ address {
   margin: 0 auto 80px;
 }
 
-.cooker-title::after {
-  display: block;
-  width: 352px;
-  border: 2px solid var(--color-primary-light);
-  content: "";
-}
+.cooker-title::after,
 .cooker-title::before {
   display: block;
   width: 352px;
@@ -253,10 +256,33 @@ address {
   content: "";
 }
 
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
 .cookers-title {
   margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
+}
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
 }
 
 .chef-image {
@@ -266,6 +292,12 @@ address {
 }
 
 /* formats section */
+
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 
 .formats-list {
   display: flex;
@@ -312,13 +344,78 @@ address {
   font-weight: 300;
 }
 
+/* carousel */
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  fill: var(--color-primary-dark);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 /* contact section */
+
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+/* .contacr-form {
+} */
+
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
 
 .contact-title {
   margin-bottom: 16px;
+  margin-top: auto;
 }
 
 /* footer */
+.footer {
+  padding: 32px 0;
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
 
 .address-link {
   color: var(--color-primary-light);
@@ -329,6 +426,14 @@ address {
 
 .address-link:hover {
   color: var(--color-brand-normal);
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+}
+
+.address-icon:hover {
+  fill: var(--color-brand-normal);
 }
 
 .address-copyright {
