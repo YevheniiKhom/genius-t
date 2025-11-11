@@ -243,17 +243,25 @@ address {
 /* cookers section */
 
 .cooker-title {
-  /* передивитися MW 520 */
-  max-width: 540px;
+  position: relative;
   margin: 0 auto 80px;
 }
 
-.cooker-title::after,
-.cooker-title::before {
-  display: block;
+.cooker-title::before,
+.cooker-title::after {
+  position: absolute;
+  bottom: 24px;
   width: 352px;
-  border: 2px solid var(--color-primary-light);
+  border: 2px solid var(--color-brand-light);
   content: "";
+}
+
+.cooker-title::before {
+  left: 0;
+}
+
+.cooker-title::after {
+  right: 0;
 }
 
 .chefs-list {
@@ -392,9 +400,38 @@ address {
 }
 
 /* footer */
+
 .footer {
+  position: relative;
   padding: 32px 0;
+  background-color: var(--color-primary-dark);
+  background-image: url(../images/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer::before {
+  width: 180px;
+  height: 120px;
+  background-image: url("../images/decor-bread-small.png");
+}
+
+.footer::after {
+  width: 380px;
+  height: 190px;
+  right: 0;
+  background-image: url("../images/decor-bread-large.png");
+}
+
 .footer-container {
   display: flex;
   gap: 20px;
@@ -441,10 +478,37 @@ address {
   color: #cfcfbc;
 }
 
-.footer {
-  background-color: var(--color-primary-dark);
-  background-image: url(../images/footer-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  /* 880px */
+  width: 480px;
+  height: 480px;
+  border-radius: 32px;
+  background-color: var(--color-primary-light);
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
