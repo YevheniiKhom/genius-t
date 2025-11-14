@@ -1,0 +1,34 @@
+@import './utils/fonts';
+@import './utils/variables';
+
+@import './base';
+
+@import './utils/utils';
+@import './components/buttons';
+@import './components/links';
+@import './components/header';
+@import './components/hero-section';
+@import './components/adventages';
+@import './components/traditions';
+@import './components/chefs';
+@import './components/formats';
+@import './components/carousel';
+@import './components/contact';
+@import './components/footer';
+@import './components/modal';
+@import './components/form';
+
+/* form */
+.section {
+    padding: 48px 0;
+}
+
+/* максимальна ширина сайту */
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+

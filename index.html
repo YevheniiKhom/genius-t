@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -149,6 +149,11 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/walrus-format.jpg"
+                    alt="Walrus format"
+                  />
                   <h3 class="formats-title" lang="en">Walrus</h3>
                   <div class="formats-text">
                     <p>Площа: до 120 м2</p>
@@ -163,7 +168,12 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
-                  <h3 class="formats-title" lang="en">HorseshoeHorseshoe</h3>
+                  <img
+                    class="format-image"
+                    src="./images/Horseshoe-format.jpg"
+                    alt="Horseshoe format"
+                  />
+                  <h3 class="formats-title" lang="en">Horseshoe</h3>
                   <div class="formats-text">
                     <p>Площа: до 25 м2</p>
                     <p>Меню: найпопулярніші позиції меню</p>
@@ -174,6 +184,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./images/Handlebar-format.jpg"
+                    alt="Handlebar format"
+                  />
                   <h3 class="formats-title" lang="en">Handlebar</h3>
                   <div class="formats-text">
                     <p>Площа: до 15 м2</p>
@@ -213,6 +228,7 @@
                     id="user-name"
                     name="user-name"
                     placeholder="Ім'я"
+                    required
                   />
                 </div>
 
@@ -227,6 +243,7 @@
                     id="user-tel"
                     name="user-tel"
                     placeholder="Телефон"
+                    required
                   />
                 </div>
 
@@ -241,6 +258,7 @@
                     id="user-email"
                     name="user-email"
                     placeholder="Електронна пошта"
+                    required
                   />
                 </div>
                 <button class="form-button button" type="submit">
@@ -333,7 +351,7 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label visually-hidden" for="user-name"></label>
             <input
@@ -342,6 +360,7 @@
               id="user-name"
               name="user-name"
               placeholder="Ім'я"
+              required
             />
           </div>
 
@@ -353,6 +372,7 @@
               id="user-tel"
               name="user-tel"
               placeholder="Телефон"
+              required
             />
           </div>
 
@@ -364,6 +384,7 @@
               id="user-email"
               name="user-email"
               placeholder="Електронна пошта"
+              required
             />
           </div>
           <button class="form-button button" type="submit">
