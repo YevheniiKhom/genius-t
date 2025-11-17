@@ -6,22 +6,25 @@
 @import './utils/utils';
 @import './components/buttons';
 @import './components/links';
-@import './components/header';
-@import './components/hero-section';
-@import './components/adventages';
-@import './components/traditions';
-@import './components/chefs';
-@import './components/formats';
+@import './loyouts/header';
+@import './loyouts/hero-section';
+@import './loyouts/adventages';
+@import './loyouts/traditions';
+@import './loyouts/chefs';
+@import './loyouts/formats';
 @import './components/carousel';
-@import './components/contact';
-@import './components/footer';
-@import './components/modal';
-@import './components/form';
+@import './loyouts/contact';
+@import './loyouts/footer';
+@import './loyouts/modal';
+@import './components/input';
+@import './components/chefs-card';
+@import './loyouts/texts';
+@import './loyouts/section';
+@import './components/formats-card';
+@import './components/form-terms';
 
 /* form */
-.section {
-    padding: 48px 0;
-}
+
 
 /* максимальна ширина сайту */
 .container {
