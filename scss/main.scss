@@ -1,37 +1,27 @@
-@import './utils/fonts';
-@import './utils/variables';
+@import "./utils/fonts";
+@import "./utils/variables";
 
-@import './base';
+@import "./base";
 
-@import './utils/utils';
-@import './components/buttons';
-@import './components/links';
-@import './loyouts/header';
-@import './loyouts/hero-section';
-@import './loyouts/adventages';
-@import './loyouts/traditions';
-@import './loyouts/chefs';
-@import './loyouts/formats';
-@import './components/carousel';
-@import './loyouts/contact';
-@import './loyouts/footer';
-@import './loyouts/modal';
-@import './components/input';
-@import './components/chefs-card';
-@import './loyouts/texts';
-@import './loyouts/section';
-@import './components/formats-card';
-@import './components/form-terms';
-
-/* form */
-
-
-/* максимальна ширина сайту */
-.container {
-    width: 100%;
-    max-width: 1288px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-
+@import "./utils/utils";
+@import "./components/buttons";
+@import "./components/links";
+@import "./loyouts/header";
+@import "./loyouts/hero-section";
+@import "./loyouts/adventages";
+@import "./loyouts/traditions";
+@import "./loyouts/chefs";
+@import "./loyouts/formats";
+@import "./components/carousel";
+@import "./loyouts/contact";
+@import "./loyouts/footer";
+@import "./loyouts/modal";
+@import "./components/input";
+@import "./components/chefs-card";
+@import "./loyouts/texts";
+@import "./loyouts/section";
+@import "./components/formats-card";
+@import "./components/form-terms";
+@import "./loyouts/mobile-menu";
+@import "./components/pagination";
+@import "./loyouts/container";
